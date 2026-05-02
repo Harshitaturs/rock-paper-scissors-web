@@ -15,8 +15,7 @@ const genCompChoice = () => {
 
 const drawGame = () => {
   msg.innerText = "Game was Draw. Play again.";
-  msg.style.backgroundColor = "#081b31";
-   document.body.className = "draw";
+  document.body.className = "draw";
 };
 
 const showWinner = (userWin, userChoice, compChoice) => {
@@ -24,34 +23,27 @@ const showWinner = (userWin, userChoice, compChoice) => {
     userScore++;
     userScorePara.innerText = userScore;
     msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
-    msg.style.backgroundColor = "green";
-    document.body.className = "win"
+    document.body.className = "win";
   } else {
     compScore++;
     compScorePara.innerText = compScore;
     msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
-    msg.style.backgroundColor = "red";
     document.body.className = "lose";
   }
 };
 
 const playGame = (userChoice) => {
-  //Generate computer choice
   const compChoice = genCompChoice();
 
   if (userChoice === compChoice) {
-    //Draw Game
     drawGame();
   } else {
     let userWin = true;
     if (userChoice === "rock") {
-      //scissors, paper
       userWin = compChoice === "paper" ? false : true;
     } else if (userChoice === "paper") {
-      //rock, scissors
       userWin = compChoice === "scissors" ? false : true;
     } else {
-      //rock, paper
       userWin = compChoice === "rock" ? false : true;
     }
     showWinner(userWin, userChoice, compChoice);
