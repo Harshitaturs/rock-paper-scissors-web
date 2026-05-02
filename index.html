@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <div class="wrapper">
+        <h1>Rock <span>Paper</span> Scissors</h1>
+        <p class="subtitle">Choose your weapon</p>
+
+        <div class="choices">
+            <div class="choice" id="rock">
+                <div class="choice-inner">
+                    <img src="img/rock.jpg" alt="Rock">
+                    <span>Rock</span>
+                </div>
+            </div>
+            <div class="choice" id="paper">
+                <div class="choice-inner">
+                    <img src="img/paper.jpg" alt="Paper">
+                    <span>Paper</span>
+                </div>
+            </div>
+            <div class="choice" id="scissors">
+                <div class="choice-inner">
+                    <img src="img/scissor.jpg" alt="Scissors">
+                    <span>Scissors</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="score-board">
+            <div class="score-card">
+                <div id="user-score">0</div>
+                <p>You</p>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="score-card">
+                <div id="comp-score">0</div>
+                <p>CPU</p>
+            </div>
+        </div>
+
+        <div class="msg-container">
+            <p id="msg">Make your move!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
